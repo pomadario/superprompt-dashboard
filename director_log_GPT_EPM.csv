@@ -1,0 +1,8 @@
+Data/Ora,Azione,Oggetto,Esito,Dettagli
+2025-04-20 22:00,Verifica documenti .docx,GPT_EPM_Presentazione_v1.2,✅ Completato,36 KB
+2025-04-20 22:00,Verifica documenti .docx,GPT_EPM_Documento_Tecnico_v1.2,✅ Completato,36 KB
+2025-04-20 22:00,Verifica documenti .docx,GPT_EPM_Manuale_Uso_v1.2,✅ Completato,36 KB
+2025-04-20 22:02,Verifica log_backup.csv,log_backup_GPT_EPM.csv,✅ Verificato,2 righe
+2025-04-20 22:03,Verifica versioni.csv,file_versions_GPT_EPM.csv,✅ Verificato,6 righe
+2025-04-20 22:04,Salvataggio stato Drive,GPT-EPM > Documentazione,✅ Confermato,3 file salvati
+2025-04-20 22:05,Aggiornamento dashboard,index.html,✅ Aggiornata,con sezioni log e versioni
