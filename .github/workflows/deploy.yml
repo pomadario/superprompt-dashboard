@@ -1,9 +1,9 @@
-name: Deploy GitHub Pages
+name: 🚀 Deploy GitHub Pages – SuperPrompt Dashboard
 
 on:
   push:
     branches:
-      - main  # oppure il branch che desideri monitorare
+      - main
 
 permissions:
   contents: read
@@ -14,21 +14,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - name: ⬇️ Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
+      - name: ⚙️ Setup GitHub Pages
+        uses: actions/configure-pages@v5
 
-      - name: Build static site
-        run: |
-          mkdir -p public
-          echo "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Deployed</title></head><body><h1>Deploy riuscito!</h1></body></html>" > public/index.html
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+      - name: 📤 Upload static files
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: .  # Puoi modificare questo percorso se i tuoi file si trovano in una sottocartella
 
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+      - name: 🚀 Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
