@@ -13,6 +13,10 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: ⬇️ Checkout repository
         uses: actions/checkout@v4
@@ -23,7 +27,8 @@ jobs:
       - name: 📤 Upload static files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .  # Puoi modificare questo percorso se i tuoi file si trovano in una sottocartella
+          path: .  # Cambialo se la root del sito è diversa
 
       - name: 🚀 Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
