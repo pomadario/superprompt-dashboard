@@ -1,123 +1,120 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>✅ Super Prompt – Dashboard LIVE test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperPrompt – Dashboard Centrale</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 30px; background: #f9f9f9; color: #333; }
-    h1 { color: #2c3e50; font-size: 30px; }
-    h2 { color: #34495e; margin-top: 40px; }
-    a.button {
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      padding: 30px 20px;
+      text-align: center;
+      color: white;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #2c3e50;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .button {
       display: inline-block;
       padding: 10px 16px;
-      margin: 10px 10px 10px 0;
+      margin: 5px 10px 5px 0;
       background-color: #2c3e50;
       color: white;
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
     }
-    a.button:hover { background-color: #1a252f; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
-    th { background: #2c3e50; color: white; }
-    tr:nth-child(even) { background-color: #f2f2f2; }
-    .status-ok { color: green; font-weight: bold; }
-    .section { margin-bottom: 60px; }
+    .button:hover {
+      background-color: #1a252f;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>🧠 SuperPrompt – Dashboard Centrale</h1>
+    <p>Controllo unificato dei progetti GPT, backup e automazioni</p>
+  </header>
+  <main>
+    <section>
+      <h2>📂 Progetti Attivi</h2>
+      <a class="button" href="#">SuperPrompt</a>
+      <a class="button" href="#">Video Machine</a>
+      <a class="button" href="#">Take Side Now</a>
+      <a class="button" href="#">Tableware Academy</a>
+    </section>
 
-  <h1>🧠 Super Prompt – Dashboard Centrale</h1>
-  <p>Gestione unificata di progetti, backup GPT, automazioni e accesso rapido a ogni modulo.</p>
+    <section>
+      <h2>📊 Stato Backup GPT</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Progetto</th>
+            <th>Ultimo Backup</th>
+            <th>Stato</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>SuperPrompt</td><td>2025-04-21</td><td>✅ Completato</td></tr>
+          <tr><td>Video Machine</td><td>2025-04-21</td><td>✅ Completato</td></tr>
+          <tr><td>Take Side Now</td><td>2025-04-21</td><td>✅ Completato</td></tr>
+          <tr><td>Tableware Academy</td><td>2025-04-21</td><td>✅ Completato</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-  <div class="section">
-    <h2>📂 Progetti GPT Attivi</h2>
-    <a class="button" href="#">📁 Super Prompt</a>
-    <a class="button" href="#">📁 Video Machine</a>
-    <a class="button" href="#">📁 Take Side Now</a>
-    <a class="button" href="#">📁 Tableware Academy</a>
-  </div>
+    <section>
+      <h2>⚙️ Automazioni Attive</h2>
+      <ul>
+        <li>📆 Backup settimanale ogni domenica ore 02:00</li>
+        <li>📂 Generazione file `project_meta.json`, `project_memory.md`, `log_backup.txt`</li>
+        <li>🔄 Validazione e rigenerazione automatica dei file</li>
+        <li>🌐 Deploy continuo su GitHub Pages</li>
+      </ul>
+    </section>
 
-  <div class="section">
-    <h2>📊 Backup GPT – Stato Aggiornato</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Progetto</th>
-          <th>Ultimo Backup</th>
-          <th>Stato</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Super Prompt</td>
-          <td>2025-04-20</td>
-          <td class="status-ok">✅ Completato</td>
-        </tr>
-        <tr>
-          <td>Video Machine</td>
-          <td>2025-04-20</td>
-          <td class="status-ok">✅ Completato</td>
-        </tr>
-        <tr>
-          <td>Take Side Now</td>
-          <td>2025-04-20</td>
-          <td class="status-ok">✅ Completato</td>
-        </tr>
-        <tr>
-          <td>Tableware Academy</td>
-          <td>2025-04-20</td>
-          <td class="status-ok">✅ Completato</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="section">
-    <h2>📋 Registro Ufficiale Documenti GPT-EPM</h2>
-    <p>Scarica il file CSV aggiornato con tutti i documenti GPT-EPM generati, completi di versioni, date, peso, pagine e stato di salvataggio in Drive.</p>
-    <a class="button" href="file_register_GPT_EPM.csv" target="_blank">📥 Scarica Registro CSV</a>
-  </div>
-
-  <div class="section">
-    <h2>📘 Registro Backup GPT-EPM</h2>
-    <p>Consulta lo storico dei backup settimanali del progetto GPT-EPM, comprensivo di esito, data, verifica e dimensione file.</p>
-    <a class="button" href="log_backup_GPT_EPM.csv" target="_blank">📥 Scarica Log Backup</a>
-  </div>
-
-  <div class="section">
-    <h2>🗂 Storico Versioni Documenti GPT-EPM</h2>
-    <p>Elenco completo di tutte le versioni dei file ufficiali (.docx) del progetto GPT-EPM con data, peso e stato Drive.</p>
-    <a class="button" href="file_versions_GPT_EPM.csv" target="_blank">📥 Scarica Registro Versioni</a>
-  </div>
-
-  <div class="section">
-    <h2>⚙️ Automazioni Attive</h2>
-    <ul>
-      <li>🗓 Backup GPT ogni domenica ore 02:00</li>
-      <li>📄 Generazione automatica `project_meta.json`, `project_memory.md`, `log_backup.txt`</li>
-      <li>🔁 Verifica file, validazione e rigenerazione automatica</li>
-      <li>🌍 Deploy su GitHub Pages con stato aggiornato</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>🔗 Collegamenti Esterni</h2>
-    <a class="button" href="https://pomadario.github.io/dashboard-backup-gpt/" target="_blank">🌍 Dashboard Backup GPT</a>
-    <a class="button" href="https://github.com/pomadario/dashboard-backup-gpt" target="_blank">📁 Repo GitHub Backup</a>
-    <a class="button" href="https://github.com/pomadario/superprompt-dashboard" target="_blank">📁 Repo GitHub Super Prompt</a>
-  </div>
-
-
-  <div class="section">
-    <h2>🧠 Attività della Regia AI – GPT-EPM</h2>
-    <p>Registro automatico delle azioni della Regia AI su backup, dashboard, file e sincronizzazione documenti GPT-EPM.</p>
-    <a class="button" href="director_log_GPT_EPM.csv" target="_blank">📥 Scarica Log Regia AI</a>
-  </div>
-
+    <section>
+      <h2>🔗 Collegamenti Esterni</h2>
+      <a class="button" href="https://pomadario.github.io/dashboard-backup-gpt/" target="_blank">Dashboard Backup GPT</a>
+      <a class="button" href="https://github.com/pomadario/dashboard-backup-gpt" target="_blank">Repo GitHub Backup</a>
+      <a class="button" href="https://github.com/pomadario/superprompt-dashboard" target="_blank">Repo GitHub SuperPrompt</a>
+    </section>
+  </main>
 </body>
 </html>
 
-</html>
