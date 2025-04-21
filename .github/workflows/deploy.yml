@@ -1,41 +1,38 @@
+# 🚀 Workflow per il deploy automatico della SuperPrompt Dashboard su GitHub Pages
 
-name: 🚀 Deploy with GitHub App – SuperPrompt Deployer
+name: Deploy GitHub Pages
 
+# 🔁 Trigger: ogni push sul branch main
 on:
   push:
     branches:
       - main
-    paths:
-      - 'index.html'
-      - '*.csv'
 
+# 🔐 Permessi necessari per scrivere su GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 🛠️ Job principale
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-
     steps:
-      - name: 📥 Checkout repository
+      # 1. 🔄 Clona il repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: 🔧 Setup Git user for GitHub App
-        run: |
-          git config user.name "SuperPrompt Deployer [APP]"
-          git config user.email "bot@superprompt.ai"
+      # 2. ⚙️ Configura GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
 
-      - name: 💾 Commit & Push changes if needed
-        run: |
-          git add .
-          git diff --cached --quiet || git commit -m "🤖 Auto update via GitHub App"
-          git push origin main
-
-      - name: 🚀 Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      # 3. 📦 Carica i file da pubblicare
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          deploy_key: ${{ secrets.GH_APP_DEPLOY_KEY }}
-          publish_dir: ./
-          publish_branch: gh-pages
-git add .github/workflows/deploy.yml && git commit -m "🚀 Forzo deploy manuale – ora: 2025-04-21 18:55" && git push origin main
+          path: '.'  # Può essere cambiato in './dist' o './docs' se necessario
+
+      # 4. 🚀 Pubblica su GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
