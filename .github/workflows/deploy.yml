@@ -1,10 +1,9 @@
-# 🚀 Workflow per il deploy automatico della SuperPrompt Dashboard
 name: Deploy GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main  # oppure il branch che desideri monitorare
 
 permissions:
   contents: read
@@ -15,21 +14,21 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 📦 Checkout codice
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: ⚙️ Setup GitHub Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      - name: 🚧 Build statico
+      - name: Build static site
         run: |
-          mkdir -p ./public
-          cp index.html ./public/
+          mkdir -p public
+          echo "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Deployed</title></head><body><h1>Deploy riuscito!</h1></body></html>" > public/index.html
 
-      - name: 📤 Upload contenuto
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./public
+          path: public
 
-      - name: 🚀 Deploy su GitHub Pages
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
