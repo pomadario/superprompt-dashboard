@@ -1,35 +1,44 @@
-# 🚀 Workflow GitHub Pages
-# Esegue automaticamente il deploy su GitHub Pages al push su main
+# 🚀 Workflow per il deploy automatico della SuperPrompt Dashboard
 
-name: Deploy su GitHub Pages
+name: Deploy GitHub Pages
 
+# 📘 Trigger: su ogni push sul branch main
 on:
   push:
     branches:
       - main
 
+# 🔐 Permessi necessari per scrivere su GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-deploy:
-  runs-on: ubuntu-latest
-  steps:
-    - name: 🔄 Clona il repository
-      uses: actions/checkout@v4
+# 🛠️ Job principale
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 🔄 Checkout del repository
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-    - name: 🌐 Setup Pages
-      uses: actions/configure-pages@v4
+      # 🧱 Setup GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
 
-    - name: ⚖️ Costruisci il sito statico (opzionale)
-      run: |
-        echo "Nessuna build necessaria, uso i file statici già presenti"
+      # 🧪 Build del sito statico (in questo caso non serve, è già pronto)
+      - name: Copy files to deployment folder
+        run: |
+          mkdir -p public
+          cp index.html public/
+          cp *.csv public/ || true
 
-    - name: 📂 Carica gli artefatti
-      uses: actions/upload-pages-artifact@v2
-      with:
-        path: '.'
+      # 🚀 Deploy su GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./public
 
-    - name: 🚀 Esegui il deploy
-      uses: actions/deploy-pages@v2
+      - name: Deploy GitHub Pages
+        uses: actions/deploy-pages@v2
