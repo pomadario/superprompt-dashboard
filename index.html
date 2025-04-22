@@ -30,7 +30,6 @@
       <button onclick="toggleNightMode()" class="btn btn-sm btn-outline-secondary" title="Attiva/disattiva modalità notturna">🌙 Modalità Notturna</button>
     </header>
 
-    <!-- SEZIONI ORIGINALI MANTENUTE -->
     <section>
       <h2 class="section-title">📁 Progetti Attivi</h2>
       <div class="d-flex flex-wrap">
@@ -74,11 +73,11 @@
     <section>
       <h2 class="section-title">🧠 Agenti GPT Attivi</h2>
       <ul class="list-group">
-        <li class="list-group-item">🧩 VCV-GPT (FileChecker, DeployVerifier, LogScanner...)</li>
+        <li class="list-group-item">🧹 VCV-GPT (FileChecker, DeployVerifier, LogScanner...)</li>
         <li class="list-group-item">🧬 Memory Squad (MemorySync, FolderWatch, BioUpdater...)</li>
         <li class="list-group-item">⏱️ TimerAgent-GPT (countdown visivo, scadenze progetti)</li>
         <li class="list-group-item">✍️ Output Boosters (SpeedWriter, Formatter, LoopAnticipator...)</li>
-        <li class="list-group-item">🧭 Director-GPT (supervisione flusso multi-task)</li>
+        <li class="list-group-item">🧡 Director-GPT (supervisione flusso multi-task)</li>
       </ul>
     </section>
 
@@ -98,9 +97,9 @@
       </ul>
     </section>
 
-    <!-- BLOCCO INTEGRATO NUOVO -->
+    <!-- BLOCCO MEMORIE GPT -->
     <section>
-      <h2 class="section-title">📤 Memorie GPT (Carica / Salva / Ripristina)</h2>
+      <h2 class="section-title">📄 Memorie GPT (Carica / Salva / Ripristina)</h2>
       <div class="row">
         <div class="col-md-6">
           <canvas id="graficoBackup" height="200"></canvas>
@@ -110,22 +109,22 @@
           <textarea id="fileContent" placeholder="Contenuto del file caricato..."></textarea>
           <div class="mt-2">
             <button class="btn btn-primary" onclick="ripristina()">🧠 Ripristina nel contesto GPT</button>
-            <button class="btn btn-success" onclick="salva()">💾 Salva come nuova memoria</button>
+            <button class="btn btn-success" onclick="salva()">📎 Salva come nuova memoria</button>
             <button class="btn btn-secondary" onclick="uploadDrive()">☁️ Upload su Google Drive</button>
             <div class="mt-2 text-success" id="actionStatus"></div>
           </div>
         </div>
       </div>
     </section>
-
   </div>
+
   <script>
     function toggleNightMode() {
       document.body.classList.toggle('night-mode');
     }
 
     const backupTable = document.getElementById("backup-status-table");
-    const progetti = ["SuperPrompt","Video Machine","Take Side Now","Tableware Academy","Drive GPT Sync","GPT App Builder","Memory Squad","VCV-GPT"];
+    const progetti = ["SuperPrompt", "Video Machine", "Take Side Now", "Tableware Academy", "Drive GPT Sync", "GPT App Builder", "Memory Squad", "VCV-GPT"];
     const today = new Date().toISOString().split("T")[0];
     backupTable.innerHTML = progetti.map(p => `<tr><td>${p}</td><td>${today}</td><td><span class='badge bg-success'>✅ Completato</span></td></tr>`).join("\n");
 
