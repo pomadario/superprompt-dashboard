@@ -49,9 +49,7 @@
       <h2 class="section-title">📊 Stato Backup GPT</h2>
       <table class="table">
         <thead><tr><th>Progetto</th><th>Ultimo Backup</th><th>Stato</th></tr></thead>
-        <tbody id="backup-status-table">
-          <!-- Contenuto generato dinamicamente -->
-        </tbody>
+        <tbody id="backup-status-table"></tbody>
       </table>
     </section>
 
@@ -140,7 +138,6 @@
     function toggleNightMode() {
       document.body.classList.toggle('night-mode');
     }
-    // Simulazione backup table dinamica
     const backupTable = document.getElementById("backup-status-table");
     const progetti = ["SuperPrompt","Video Machine","Take Side Now","Tableware Academy","Drive GPT Sync","GPT App Builder","Memory Squad","VCV-GPT"];
     const today = new Date().toISOString().split("T")[0];
