@@ -1,0 +1,13 @@
+{
+  "name": "SuperPrompt",
+  "short_name": "SuperPrompt",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "description": "Dashboard centrale per tutti i progetti GPT",
+  "icons": [{
+    "src": "icon.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }]
+}

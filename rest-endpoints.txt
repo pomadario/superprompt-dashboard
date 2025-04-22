@@ -1,0 +1,4 @@
+GET /api/memories
+POST /api/memories
+GET /api/status
+...
