@@ -5,9 +5,23 @@
   "display": "standalone",
   "background_color": "#f8fafc",
   "description": "Dashboard centrale per tutti i progetti GPT",
-  "icons": [{
-    "src": "icon.png",
-    "type": "image/png",
-    "sizes": "192x192"
-  }]
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-wide.png",
+      "type": "image/png",
+      "sizes": "800x600",
+      "form_factor": "wide"
+    }
+  ]
 }
+
+
+
+
