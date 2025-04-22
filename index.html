@@ -30,6 +30,7 @@
       <button onclick="toggleNightMode()" class="btn btn-sm btn-outline-secondary" title="Attiva/disattiva modalità notturna">🌙 Modalità Notturna</button>
     </header>
 
+    <!-- SEZIONE PROGETTI ATTIVI -->
     <section>
       <h2 class="section-title">📁 Progetti Attivi</h2>
       <div class="d-flex flex-wrap">
@@ -49,6 +50,7 @@
       </div>
     </section>
 
+    <!-- SEZIONE BACKUP STATUS -->
     <section>
       <h2 class="section-title">📊 Stato Backup GPT</h2>
       <table class="table">
@@ -57,6 +59,7 @@
       </table>
     </section>
 
+    <!-- TOOLS E AUTOMAZIONI -->
     <section>
       <h2 class="section-title">⚙️ Tools e Automazioni Attive</h2>
       <ul class="list-group">
@@ -70,35 +73,21 @@
       </ul>
     </section>
 
+    <!-- AGENTI ATTIVI -->
     <section>
       <h2 class="section-title">🧠 Agenti GPT Attivi</h2>
       <ul class="list-group">
-        <li class="list-group-item">🧹 VCV-GPT (FileChecker, DeployVerifier, LogScanner...)</li>
+        <li class="list-group-item">🧩 VCV-GPT (FileChecker, DeployVerifier, LogScanner...)</li>
         <li class="list-group-item">🧬 Memory Squad (MemorySync, FolderWatch, BioUpdater...)</li>
         <li class="list-group-item">⏱️ TimerAgent-GPT (countdown visivo, scadenze progetti)</li>
         <li class="list-group-item">✍️ Output Boosters (SpeedWriter, Formatter, LoopAnticipator...)</li>
-        <li class="list-group-item">🧽 Director-GPT (supervisione flusso multi-task)</li>
+        <li class="list-group-item">🧭 Director-GPT (supervisione flusso multi-task)</li>
       </ul>
     </section>
 
+    <!-- MEMORIE GPT -->
     <section>
-      <h2 class="section-title">🔍 Cosa manca ancora</h2>
-      <ul>
-        <li>❌ Integrazione React per dashboard dinamica</li>
-        <li>❌ Simulazione agenti in tempo reale</li>
-        <li>❌ Gestione visuale di crediti / token</li>
-        <li>❌ Download sincronizzato via API</li>
-        <li>❌ Grafico interattivo reale con dati attivi</li>
-        <li>❌ Export CSV completo con log temporali</li>
-        <li>❌ Analisi performance agenti AI</li>
-        <li>❌ Classifica progetti per avanzamento</li>
-        <li>❌ Modalità multiutente con login</li>
-        <li>❌ Notifiche push in tempo reale</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2 class="section-title">📄 Memorie GPT (Carica / Salva / Ripristina)</h2>
+      <h2 class="section-title">📤 Memorie GPT (Carica / Salva / Ripristina)</h2>
       <div class="row">
         <div class="col-md-6">
           <canvas id="graficoBackup" height="200"></canvas>
@@ -108,7 +97,7 @@
           <textarea id="fileContent" placeholder="Contenuto del file caricato..."></textarea>
           <div class="mt-2">
             <button class="btn btn-primary" onclick="ripristina()">🧠 Ripristina nel contesto GPT</button>
-            <button class="btn btn-success" onclick="salva()">📂 Salva come nuova memoria</button>
+            <button class="btn btn-success" onclick="salva()">💾 Salva come nuova memoria</button>
             <button class="btn btn-secondary" onclick="uploadDrive()">☁️ Upload su Google Drive</button>
             <div class="mt-2 text-success" id="actionStatus"></div>
           </div>
