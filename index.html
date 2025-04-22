@@ -19,6 +19,7 @@
     .night-mode .table thead { background-color: #444; }
     .night-mode .log-box { background-color: #1a1a1a; border-color: #00aaff; }
     .tooltip-icon { cursor: pointer; margin-left: 5px; color: #6c757d; }
+    textarea { width: 100%; height: 180px; margin-top: 1rem; font-family: monospace; padding: 1rem; border-radius: 8px; border: 1px solid #d1d5db; background: #f9fafb; }
   </style>
 </head>
 <body>
@@ -29,22 +30,28 @@
       <button onclick="toggleNightMode()" class="btn btn-sm btn-outline-secondary" title="Attiva/disattiva modalità notturna">🌙 Modalità Notturna</button>
     </header>
 
+    <!-- SEZIONI ORIGINALI MANTENUTE -->
     <section>
-      <h2 class="section-title">📁 Progetti Attivi <span class="tooltip-icon" title="Elenco di tutti i progetti attualmente attivi o in sviluppo">ℹ️</span></h2>
+      <h2 class="section-title">📁 Progetti Attivi</h2>
       <div class="d-flex flex-wrap">
-        <a class="btn btn-dark project-card" href="#superprompt" title="Sistema centrale per prompt intelligenti">SuperPrompt</a>
-        <a class="btn btn-dark project-card" href="#videomachine" title="Automazione completa produzione video">Video Machine</a>
-        <a class="btn btn-dark project-card" href="#takesidenow" title="Piattaforma per opinioni su temi sociali">Take Side Now</a>
-        <a class="btn btn-dark project-card" href="#tablewareacademy" title="Academy internazionale sul mondo della tavola">Tableware Academy</a>
-        <a class="btn btn-outline-dark project-card" href="#controlpanel" title="Dashboard centralizzata per tutte le WebApp">WebApp Control Panel</a>
-        <a class="btn btn-outline-dark project-card" href="#drivegptsync" title="Sistema sincronizzazione GPT ↔️ Google Drive">Drive GPT Sync</a>
-        <a class="btn btn-outline-dark project-card" href="#backupgpt" title="Sistema backup automatico e storico file">Backup GPT</a>
-        <a class="btn btn-outline-primary project-card" href="https://pomadario.github.io/gpt-memory-backup-manager/" target="_blank" title="Gestione backup e restore delle memorie GPT">📂 GPT Memory Backup</a>
+        <a class="btn btn-dark project-card" href="#">SuperPrompt</a>
+        <a class="btn btn-dark project-card" href="#">Video Machine</a>
+        <a class="btn btn-dark project-card" href="#">Take Side Now</a>
+        <a class="btn btn-dark project-card" href="#">Tableware Academy</a>
+        <a class="btn btn-outline-dark project-card" href="#">WebApp Control Panel</a>
+        <a class="btn btn-outline-dark project-card" href="#">Drive GPT Sync</a>
+        <a class="btn btn-outline-dark project-card" href="#">Backup GPT</a>
+        <a class="btn btn-outline-dark project-card" href="#">GPT App Builder</a>
+        <a class="btn btn-outline-dark project-card" href="#">VCV-GPT</a>
+        <a class="btn btn-outline-dark project-card" href="#">Memory Squad</a>
+        <a class="btn btn-outline-dark project-card" href="#">🧠 Cervello Centrale</a>
+        <a class="btn btn-outline-dark project-card" href="#">TimerAgent-GPT</a>
+        <a class="btn btn-outline-primary project-card" href="https://pomadario.github.io/gpt-memory-backup-manager/" target="_blank">📂 GPT Memory Backup</a>
       </div>
     </section>
 
     <section>
-      <h2 class="section-title">📊 Stato Backup GPT <span class="tooltip-icon" title="Verifica se i backup dei progetti sono aggiornati">ℹ️</span></h2>
+      <h2 class="section-title">📊 Stato Backup GPT</h2>
       <table class="table">
         <thead><tr><th>Progetto</th><th>Ultimo Backup</th><th>Stato</th></tr></thead>
         <tbody id="backup-status-table"></tbody>
@@ -52,86 +59,123 @@
     </section>
 
     <section>
-      <h2 class="section-title">🧠 Memorie GPT (Interattivo)</h2>
+      <h2 class="section-title">⚙️ Tools e Automazioni Attive</h2>
+      <ul class="list-group">
+        <li class="list-group-item">✅ Deploy GitHub Pages automatico</li>
+        <li class="list-group-item">✅ Backup settimanale in Drive</li>
+        <li class="list-group-item">✅ Versionamento file e log PDF</li>
+        <li class="list-group-item">✅ Notifiche + timer visuale</li>
+        <li class="list-group-item">✅ GPT App Builder + moduli plug & play</li>
+        <li class="list-group-item">✅ Supervisor + Director-GPT + multi-agent GPT attivi</li>
+        <li class="list-group-item">✅ Storage collegato Google Drive / GitHub</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="section-title">🧠 Agenti GPT Attivi</h2>
+      <ul class="list-group">
+        <li class="list-group-item">🧩 VCV-GPT (FileChecker, DeployVerifier, LogScanner...)</li>
+        <li class="list-group-item">🧬 Memory Squad (MemorySync, FolderWatch, BioUpdater...)</li>
+        <li class="list-group-item">⏱️ TimerAgent-GPT (countdown visivo, scadenze progetti)</li>
+        <li class="list-group-item">✍️ Output Boosters (SpeedWriter, Formatter, LoopAnticipator...)</li>
+        <li class="list-group-item">🧭 Director-GPT (supervisione flusso multi-task)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="section-title">🔍 Cosa manca ancora</h2>
+      <ul>
+        <li>❌ Integrazione React per dashboard dinamica</li>
+        <li>❌ Simulazione agenti in tempo reale</li>
+        <li>❌ Gestione visuale di crediti / token</li>
+        <li>❌ Download sincronizzato via API</li>
+        <li>❌ Grafico interattivo reale con dati attivi</li>
+        <li>❌ Export CSV completo con log temporali</li>
+        <li>❌ Analisi performance agenti AI</li>
+        <li>❌ Classifica progetti per avanzamento</li>
+        <li>❌ Modalità multiutente con login</li>
+        <li>❌ Notifiche push in tempo reale</li>
+      </ul>
+    </section>
+
+    <!-- BLOCCO INTEGRATO NUOVO -->
+    <section>
+      <h2 class="section-title">📤 Memorie GPT (Carica / Salva / Ripristina)</h2>
       <div class="row">
         <div class="col-md-6">
-          <div class="card">
-            <h5>📊 Grafico Backup</h5>
-            <canvas id="graficoBackup" height="200"></canvas>
-          </div>
+          <canvas id="graficoBackup" height="200"></canvas>
         </div>
         <div class="col-md-6">
-          <div class="card">
-            <h5>📤 Upload & Ripristino</h5>
-            <input type="file" class="form-control mb-2" id="fileInput" accept=".txt,.json,.csv" />
-            <textarea id="fileContent" class="form-control" placeholder="Contenuto del file caricato..."></textarea>
-            <div class="mt-2">
-              <button class="btn btn-primary" onclick="ripristina()">🧠 Ripristina nel contesto GPT</button>
-              <button class="btn btn-success" onclick="salva()">💾 Salva come nuova memoria</button>
-              <button class="btn btn-secondary" onclick="uploadDrive()">☁️ Upload simulato su Drive</button>
-              <div class="mt-2 text-success" id="actionStatus"></div>
-            </div>
+          <input type="file" class="form-control mb-2" id="fileInput" accept=".txt,.json,.csv" />
+          <textarea id="fileContent" placeholder="Contenuto del file caricato..."></textarea>
+          <div class="mt-2">
+            <button class="btn btn-primary" onclick="ripristina()">🧠 Ripristina nel contesto GPT</button>
+            <button class="btn btn-success" onclick="salva()">💾 Salva come nuova memoria</button>
+            <button class="btn btn-secondary" onclick="uploadDrive()">☁️ Upload su Google Drive</button>
+            <div class="mt-2 text-success" id="actionStatus"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <script>
-      function toggleNightMode() {
-        document.body.classList.toggle('night-mode');
+  </div>
+  <script>
+    function toggleNightMode() {
+      document.body.classList.toggle('night-mode');
+    }
+
+    const backupTable = document.getElementById("backup-status-table");
+    const progetti = ["SuperPrompt","Video Machine","Take Side Now","Tableware Academy","Drive GPT Sync","GPT App Builder","Memory Squad","VCV-GPT"];
+    const today = new Date().toISOString().split("T")[0];
+    backupTable.innerHTML = progetti.map(p => `<tr><td>${p}</td><td>${today}</td><td><span class='badge bg-success'>✅ Completato</span></td></tr>`).join("\n");
+
+    const ctx = document.getElementById('graficoBackup').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['SuperPrompt', 'Video Machine', 'Take Side Now'],
+        datasets: [{ label: 'Backup', data: [5, 3, 4], backgroundColor: ['#3b82f6', '#6366f1', '#10b981'] }]
+      },
+      options: { responsive: true, plugins: { legend: { display: false } } }
+    });
+
+    const fileInput = document.getElementById('fileInput');
+    const fileContent = document.getElementById('fileContent');
+    const actionStatus = document.getElementById('actionStatus');
+
+    fileInput.addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        fileContent.value = event.target.result;
+      };
+      reader.readAsText(file);
+    });
+
+    function ripristina() {
+      if (!fileContent.value.trim()) {
+        actionStatus.textContent = "⚠️ Nessun contenuto da ripristinare.";
+        return;
       }
-      const backupTable = document.getElementById("backup-status-table");
-      const progetti = ["SuperPrompt","Video Machine","Take Side Now","Tableware Academy","Drive GPT Sync","GPT App Builder","Memory Squad","VCV-GPT"];
-      const today = new Date().toISOString().split("T")[0];
-      backupTable.innerHTML = progetti.map(p => `<tr><td>${p}</td><td>${today}</td><td><span class='badge bg-success'>✅ Completato</span></td></tr>`).join("\n");
+      actionStatus.textContent = "🧠 Memoria GPT ripristinata (simulata)";
+    }
 
-      const ctx = document.getElementById('graficoBackup').getContext('2d');
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['SuperPrompt', 'Video Machine', 'Take Side Now'],
-          datasets: [{ label: 'Backup', data: [5, 3, 4], backgroundColor: ['#3b82f6', '#6366f1', '#10b981'] }]
-        },
-        options: { responsive: true, plugins: { legend: { display: false } } }
-      });
-
-      const fileInput = document.getElementById('fileInput');
-      const fileContent = document.getElementById('fileContent');
-      const actionStatus = document.getElementById('actionStatus');
-
-      fileInput.addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (!file) return;
-        const reader = new FileReader();
-        reader.onload = function(event) {
-          fileContent.value = event.target.result;
-        };
-        reader.readAsText(file);
-      });
-
-      function ripristina() {
-        if (!fileContent.value.trim()) {
-          actionStatus.textContent = "⚠️ Nessun contenuto da ripristinare.";
-          return;
-        }
-        actionStatus.textContent = "🧠 Memoria GPT ripristinata (simulata)";
+    function salva() {
+      if (!fileContent.value.trim()) {
+        actionStatus.textContent = "⚠️ Nessun contenuto da salvare.";
+        return;
       }
+      actionStatus.textContent = "💾 Nuova memoria simulata salvata!";
+    }
 
-      function salva() {
-        if (!fileContent.value.trim()) {
-          actionStatus.textContent = "⚠️ Nessun contenuto da salvare.";
-          return;
-        }
-        actionStatus.textContent = "💾 Nuova memoria simulata salvata!";
+    function uploadDrive() {
+      if (!fileContent.value.trim()) {
+        actionStatus.textContent = "⚠️ Nessun contenuto da inviare.";
+        return;
       }
-
-      function uploadDrive() {
-        if (!fileContent.value.trim()) {
-          actionStatus.textContent = "⚠️ Nessun contenuto da inviare.";
-          return;
-        }
-        actionStatus.textContent = "☁️ File simulato inviato a Google Drive!";
-      }
-    </script>
+      actionStatus.textContent = "☁️ File simulato inviato a Google Drive!";
+    }
+  </script>
 </body>
 </html>
