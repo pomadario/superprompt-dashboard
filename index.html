@@ -2,120 +2,136 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SuperPrompt Dashboard – Estesa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SuperPrompt – Dashboard Centrale</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    body { font-family: 'Segoe UI', sans-serif; background-color: #f8fafc; color: #1f2937; padding: 2rem; transition: all 0.4s ease; }
-    h1, h2 { color: #1f2937; }
-    .card { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-    .btn { background-color: #3b82f6; color: white; padding: 0.7rem 1.2rem; margin: 0.5rem 0.5rem 0 0; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem; }
-    .btn:hover { background-color: #2563eb; }
-    .file-input { margin: 1rem 0; }
-    textarea { width: 100%; height: 180px; margin-top: 1rem; font-family: monospace; padding: 1rem; border-radius: 8px; border: 1px solid #d1d5db; background: #f9fafb; }
-    .status { margin-top: 1rem; font-size: 0.95rem; font-weight: bold; }
-    .dark { background-color: #0f172a; color: #f8fafc; }
-    .dark .card { background-color: #1e293b; color: #f8fafc; }
+    body { background-color: #f8fafc; font-family: 'Segoe UI', sans-serif; transition: background 0.4s, color 0.4s; }
+    .section-title { font-weight: 700; font-size: 1.5rem; margin-top: 2rem; }
+    .badge-status { font-size: 0.9rem; }
+    .project-card { margin: 0.5rem; }
+    .icon { font-size: 1.2rem; margin-right: 5px; }
+    .table thead { background-color: #1f2937; color: white; }
+    .log-box { background-color: #f1f1f1; border-left: 4px solid #007bff; padding: 10px; margin-bottom: 10px; }
+    .graph-placeholder { height: 150px; background: repeating-linear-gradient(45deg, #d3d3d3, #d3d3d3 10px, #f8fafc 10px, #f8fafc 20px); margin-top: 15px; }
+    .night-mode { background-color: #0b0d0e !important; color: #eee !important; }
+    .night-mode .table thead { background-color: #444; }
+    .night-mode .log-box { background-color: #1a1a1a; border-color: #00aaff; }
+    .tooltip-icon { cursor: pointer; margin-left: 5px; color: #6c757d; }
   </style>
 </head>
 <body>
-  <h1>🧠 SuperPrompt Dashboard – Estesa</h1>
+  <div class="container py-4">
+    <header class="text-center mb-5">
+      <h1 class="fw-bold text-primary">🧠 SuperPrompt – Dashboard Centrale</h1>
+      <p class="text-muted">Controllo unificato dei progetti GPT, backup, automazioni, agenti, API e storage</p>
+      <button onclick="toggleNightMode()" class="btn btn-sm btn-outline-secondary" title="Attiva/disattiva modalità notturna">🌙 Modalità Notturna</button>
+    </header>
 
-  <button onclick="toggleDark()" class="btn">🌓 Modalità Notte</button>
+    <section>
+      <h2 class="section-title">📁 Progetti Attivi <span class="tooltip-icon" title="Elenco di tutti i progetti attualmente attivi o in sviluppo">ℹ️</span></h2>
+      <div class="d-flex flex-wrap">
+        <a class="btn btn-dark project-card" href="#superprompt" title="Sistema centrale per prompt intelligenti">SuperPrompt</a>
+        <a class="btn btn-dark project-card" href="#videomachine" title="Automazione completa produzione video">Video Machine</a>
+        <a class="btn btn-dark project-card" href="#takesidenow" title="Piattaforma per opinioni su temi sociali">Take Side Now</a>
+        <a class="btn btn-dark project-card" href="#tablewareacademy" title="Academy internazionale sul mondo della tavola">Tableware Academy</a>
+        <a class="btn btn-outline-dark project-card" href="#controlpanel" title="Dashboard centralizzata per tutte le WebApp">WebApp Control Panel</a>
+        <a class="btn btn-outline-dark project-card" href="#drivegptsync" title="Sistema sincronizzazione GPT ↔️ Google Drive">Drive GPT Sync</a>
+        <a class="btn btn-outline-dark project-card" href="#backupgpt" title="Sistema backup automatico e storico file">Backup GPT</a>
+        <a class="btn btn-outline-primary project-card" href="https://pomadario.github.io/gpt-memory-backup-manager/" target="_blank" title="Gestione backup e restore delle memorie GPT">📂 GPT Memory Backup</a>
+      </div>
+    </section>
 
-  <div class="card">
-    <h2>📊 Stato Backup (Grafico Esempio)</h2>
-    <canvas id="graficoBackup" width="400" height="200"></canvas>
-  </div>
+    <section>
+      <h2 class="section-title">📊 Stato Backup GPT <span class="tooltip-icon" title="Verifica se i backup dei progetti sono aggiornati">ℹ️</span></h2>
+      <table class="table">
+        <thead><tr><th>Progetto</th><th>Ultimo Backup</th><th>Stato</th></tr></thead>
+        <tbody id="backup-status-table"></tbody>
+      </table>
+    </section>
 
-  <div class="card">
-    <h2>📥 Scarica Backup GPT</h2>
-    <a class="btn" href="memorie_complete_con_sistema.txt" download>Scarica .TXT</a>
-    <a class="btn" href="memorie_complete_con_sistema.csv" download>Scarica .CSV</a>
-    <a class="btn" href="memorie_complete_con_sistema.json" download>Scarica .JSON</a>
-  </div>
+    <section>
+      <h2 class="section-title">🧠 Memorie GPT (Interattivo)</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <h5>📊 Grafico Backup</h5>
+            <canvas id="graficoBackup" height="200"></canvas>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <h5>📤 Upload & Ripristino</h5>
+            <input type="file" class="form-control mb-2" id="fileInput" accept=".txt,.json,.csv" />
+            <textarea id="fileContent" class="form-control" placeholder="Contenuto del file caricato..."></textarea>
+            <div class="mt-2">
+              <button class="btn btn-primary" onclick="ripristina()">🧠 Ripristina nel contesto GPT</button>
+              <button class="btn btn-success" onclick="salva()">💾 Salva come nuova memoria</button>
+              <button class="btn btn-secondary" onclick="uploadDrive()">☁️ Upload simulato su Drive</button>
+              <div class="mt-2 text-success" id="actionStatus"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <div class="card">
-    <h2>📤 Carica Memoria GPT</h2>
-    <input type="file" class="file-input" id="fileInput" accept=".txt,.json,.csv" />
-    <textarea id="fileContent" placeholder="Contenuto del file caricato..."></textarea>
-    <div class="status" id="uploadStatus"></div>
-    <button class="btn" onclick="ripristina()">🧠 Ripristina nel contesto GPT</button>
-    <button class="btn" onclick="salva()">💾 Salva come nuova memoria</button>
-    <button class="btn" onclick="uploadDrive()">☁️ Upload su Google Drive</button>
-    <div class="status" id="actionStatus"></div>
-  </div>
+    <script>
+      function toggleNightMode() {
+        document.body.classList.toggle('night-mode');
+      }
+      const backupTable = document.getElementById("backup-status-table");
+      const progetti = ["SuperPrompt","Video Machine","Take Side Now","Tableware Academy","Drive GPT Sync","GPT App Builder","Memory Squad","VCV-GPT"];
+      const today = new Date().toISOString().split("T")[0];
+      backupTable.innerHTML = progetti.map(p => `<tr><td>${p}</td><td>${today}</td><td><span class='badge bg-success'>✅ Completato</span></td></tr>`).join("\n");
 
-  <script>
-    function toggleDark() {
-      document.body.classList.toggle('dark');
-    }
+      const ctx = document.getElementById('graficoBackup').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['SuperPrompt', 'Video Machine', 'Take Side Now'],
+          datasets: [{ label: 'Backup', data: [5, 3, 4], backgroundColor: ['#3b82f6', '#6366f1', '#10b981'] }]
+        },
+        options: { responsive: true, plugins: { legend: { display: false } } }
+      });
 
-    const ctx = document.getElementById('graficoBackup').getContext('2d');
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['SuperPrompt', 'Video Machine', 'Take Side Now'],
-        datasets: [{
-          label: 'Backup completati',
-          data: [5, 3, 4],
-          backgroundColor: ['#3b82f6', '#6366f1', '#10b981']
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { display: false }
+      const fileInput = document.getElementById('fileInput');
+      const fileContent = document.getElementById('fileContent');
+      const actionStatus = document.getElementById('actionStatus');
+
+      fileInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          fileContent.value = event.target.result;
+        };
+        reader.readAsText(file);
+      });
+
+      function ripristina() {
+        if (!fileContent.value.trim()) {
+          actionStatus.textContent = "⚠️ Nessun contenuto da ripristinare.";
+          return;
         }
+        actionStatus.textContent = "🧠 Memoria GPT ripristinata (simulata)";
       }
-    });
 
-    const fileInput = document.getElementById('fileInput');
-    const fileContent = document.getElementById('fileContent');
-    const uploadStatus = document.getElementById('uploadStatus');
-    const actionStatus = document.getElementById('actionStatus');
-
-    fileInput.addEventListener('change', function(e) {
-      const file = e.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = function(event) {
-        fileContent.value = event.target.result;
-        uploadStatus.textContent = "✅ File caricato.";
-      };
-      reader.readAsText(file);
-    });
-
-    function ripristina() {
-      if (!fileContent.value.trim()) {
-        actionStatus.textContent = "⚠️ Nessun contenuto da ripristinare.";
-        actionStatus.style.color = "crimson";
-        return;
+      function salva() {
+        if (!fileContent.value.trim()) {
+          actionStatus.textContent = "⚠️ Nessun contenuto da salvare.";
+          return;
+        }
+        actionStatus.textContent = "💾 Nuova memoria simulata salvata!";
       }
-      actionStatus.textContent = "🧠 Memoria GPT ripristinata (simulata)";
-      actionStatus.style.color = "green";
-    }
 
-    function salva() {
-      if (!fileContent.value.trim()) {
-        actionStatus.textContent = "⚠️ Nessun contenuto da salvare.";
-        actionStatus.style.color = "crimson";
-        return;
+      function uploadDrive() {
+        if (!fileContent.value.trim()) {
+          actionStatus.textContent = "⚠️ Nessun contenuto da inviare.";
+          return;
+        }
+        actionStatus.textContent = "☁️ File simulato inviato a Google Drive!";
       }
-      actionStatus.textContent = "💾 Nuova memoria simulata salvata!";
-      actionStatus.style.color = "green";
-    }
-
-    function uploadDrive() {
-      if (!fileContent.value.trim()) {
-        actionStatus.textContent = "⚠️ Nessun contenuto da inviare.";
-        actionStatus.style.color = "crimson";
-        return;
-      }
-      actionStatus.textContent = "☁️ File simulato inviato a Google Drive!";
-      actionStatus.style.color = "green";
-    }
-  </script>
+    </script>
 </body>
 </html>
-
