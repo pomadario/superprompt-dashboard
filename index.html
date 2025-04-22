@@ -17,6 +17,7 @@
     .night-mode { background-color: #0b0d0e !important; color: #eee !important; }
     .night-mode .table thead { background-color: #444; }
     .night-mode .log-box { background-color: #1a1a1a; border-color: #00aaff; }
+    .tooltip-icon { cursor: pointer; margin-left: 5px; color: #6c757d; }
   </style>
 </head>
 <body>
@@ -24,29 +25,29 @@
     <header class="text-center mb-5">
       <h1 class="fw-bold text-primary">🧠 SuperPrompt – Dashboard Centrale</h1>
       <p class="text-muted">Controllo unificato dei progetti GPT, backup, automazioni, agenti, API e storage</p>
-      <button onclick="toggleNightMode()" class="btn btn-sm btn-outline-secondary">🌙 Modalità Notturna</button>
+      <button onclick="toggleNightMode()" class="btn btn-sm btn-outline-secondary" title="Attiva/disattiva modalità notturna">🌙 Modalità Notturna</button>
     </header>
 
     <section>
-      <h2 class="section-title">📁 Progetti Attivi</h2>
+      <h2 class="section-title">📁 Progetti Attivi <span class="tooltip-icon" title="Elenco di tutti i progetti attualmente attivi o in sviluppo">ℹ️</span></h2>
       <div class="d-flex flex-wrap">
-        <a class="btn btn-dark project-card" href="#superprompt">SuperPrompt</a>
-        <a class="btn btn-dark project-card" href="#videomachine">Video Machine</a>
-        <a class="btn btn-dark project-card" href="#takesidenow">Take Side Now</a>
-        <a class="btn btn-dark project-card" href="#tablewareacademy">Tableware Academy</a>
-        <a class="btn btn-outline-dark project-card" href="#controlpanel">WebApp Control Panel</a>
-        <a class="btn btn-outline-dark project-card" href="#drivegptsync">Drive GPT Sync</a>
-        <a class="btn btn-outline-dark project-card" href="#backupgpt">Backup GPT</a>
-        <a class="btn btn-outline-dark project-card" href="#gptappbuilder">GPT App Builder</a>
-        <a class="btn btn-outline-dark project-card" href="#vcvgpt">VCV-GPT</a>
-        <a class="btn btn-outline-dark project-card" href="#memorysquad">Memory Squad</a>
-        <a class="btn btn-outline-dark project-card" href="#cervellocentrale">🧠 Cervello Centrale</a>
-        <a class="btn btn-outline-dark project-card" href="#timergpt">TimerAgent-GPT</a>
+        <a class="btn btn-dark project-card" href="#superprompt" title="Sistema centrale per prompt intelligenti">SuperPrompt</a>
+        <a class="btn btn-dark project-card" href="#videomachine" title="Automazione completa produzione video">Video Machine</a>
+        <a class="btn btn-dark project-card" href="#takesidenow" title="Piattaforma per opinioni su temi sociali">Take Side Now</a>
+        <a class="btn btn-dark project-card" href="#tablewareacademy" title="Academy internazionale sul mondo della tavola">Tableware Academy</a>
+        <a class="btn btn-outline-dark project-card" href="#controlpanel" title="Dashboard centralizzata per tutte le WebApp">WebApp Control Panel</a>
+        <a class="btn btn-outline-dark project-card" href="#drivegptsync" title="Sistema sincronizzazione GPT ↔️ Google Drive">Drive GPT Sync</a>
+        <a class="btn btn-outline-dark project-card" href="#backupgpt" title="Sistema backup automatico e storico file">Backup GPT</a>
+        <a class="btn btn-outline-dark project-card" href="#gptappbuilder" title="Costruttore modulare di Web App GPT">GPT App Builder</a>
+        <a class="btn btn-outline-dark project-card" href="#vcvgpt" title="Verifica continua dei file e deploy reali">VCV-GPT</a>
+        <a class="btn btn-outline-dark project-card" href="#memorysquad" title="Squadra AI che mantiene aggiornate tutte le memorie GPT">Memory Squad</a>
+        <a class="btn btn-outline-dark project-card" href="#cervellocentrale" title="Nucleo decisionale del sistema SuperPrompt">🧠 Cervello Centrale</a>
+        <a class="btn btn-outline-dark project-card" href="#timergpt" title="Conto alla rovescia e scadenze visive per ogni progetto">TimerAgent-GPT</a>
       </div>
     </section>
 
     <section>
-      <h2 class="section-title">📊 Stato Backup GPT</h2>
+      <h2 class="section-title">📊 Stato Backup GPT <span class="tooltip-icon" title="Verifica se i backup dei progetti sono aggiornati">ℹ️</span></h2>
       <table class="table">
         <thead><tr><th>Progetto</th><th>Ultimo Backup</th><th>Stato</th></tr></thead>
         <tbody id="backup-status-table"></tbody>
@@ -54,94 +55,53 @@
     </section>
 
     <section>
-      <h2 class="section-title">⚙️ Tools e Automazioni Attive</h2>
+      <h2 class="section-title">⚙️ Tools e Automazioni Attive <span class="tooltip-icon" title="Panoramica di tutte le automazioni GPT abilitate">ℹ️</span></h2>
       <ul class="list-group">
-        <li class="list-group-item">✅ Deploy GitHub Pages automatico</li>
-        <li class="list-group-item">✅ Backup settimanale in Drive</li>
-        <li class="list-group-item">✅ Versionamento file e log PDF</li>
-        <li class="list-group-item">✅ Notifiche + timer visuale</li>
-        <li class="list-group-item">✅ GPT App Builder + moduli plug & play</li>
-        <li class="list-group-item">✅ Supervisor + Director-GPT + multi-agent GPT attivi</li>
-        <li class="list-group-item">✅ Storage collegato Google Drive / GitHub</li>
+        <li class="list-group-item" title="Deploy automatico tramite GitHub Pages">✅ Deploy GitHub Pages automatico</li>
+        <li class="list-group-item" title="Backup settimanale archiviato su Drive">✅ Backup settimanale in Drive</li>
+        <li class="list-group-item" title="Creazione automatica di versioni dei file e log PDF">✅ Versionamento file e log PDF</li>
+        <li class="list-group-item" title="Sistema di notifiche e conto alla rovescia visivo">✅ Notifiche + timer visuale</li>
+        <li class="list-group-item" title="Sistema modulare per costruire Web App GPT">✅ GPT App Builder + moduli plug & play</li>
+        <li class="list-group-item" title="Sistema di regia automatica e supervisione AI">✅ Supervisor + Director-GPT + multi-agent GPT attivi</li>
+        <li class="list-group-item" title="Storage sincronizzato tra Drive e GitHub">✅ Storage collegato Google Drive / GitHub</li>
       </ul>
     </section>
 
     <section>
-      <h2 class="section-title">🧠 Agenti GPT Attivi</h2>
+      <h2 class="section-title">🧠 Agenti GPT Attivi <span class="tooltip-icon" title="Elenco degli agenti AI attivi nel sistema">ℹ️</span></h2>
       <ul class="list-group">
-        <li class="list-group-item">🧩 VCV-GPT (FileChecker, DeployVerifier, LogScanner...)</li>
-        <li class="list-group-item">🧬 Memory Squad (MemorySync, FolderWatch, BioUpdater...)</li>
-        <li class="list-group-item">⏱️ TimerAgent-GPT (countdown visivo, scadenze progetti)</li>
-        <li class="list-group-item">✍️ Output Boosters (SpeedWriter, Formatter, LoopAnticipator...)</li>
-        <li class="list-group-item">🧭 Director-GPT (supervisione flusso multi-task)</li>
+        <li class="list-group-item" title="Verifica file, deploy e log">🧩 VCV-GPT (FileChecker, DeployVerifier, LogScanner...)</li>
+        <li class="list-group-item" title="Mantiene aggiornate le memorie AI e sincronizza i dati">🧬 Memory Squad (MemorySync, FolderWatch, BioUpdater...)</li>
+        <li class="list-group-item" title="Gestisce conto alla rovescia per ogni task">⏱️ TimerAgent-GPT (countdown visivo, scadenze progetti)</li>
+        <li class="list-group-item" title="Aumenta la velocità e qualità di output GPT">✍️ Output Boosters (SpeedWriter, Formatter, LoopAnticipator...)</li>
+        <li class="list-group-item" title="Regia centrale intelligente dei flussi multi-task">🧭 Director-GPT (supervisione flusso multi-task)</li>
       </ul>
     </section>
 
     <section>
-      <h2 class="section-title">📈 Avanzamento Progetti GPT</h2>
-      <div class="graph-placeholder text-center">[Grafico interattivo in arrivo]</div>
-    </section>
-
-    <section>
-      <h2 class="section-title">🕘 Ultimi Deploy & Log</h2>
-      <div class="log-box">✅ 2025-04-21 – Index HTML esteso generato (1000 righe)</div>
-      <div class="log-box">✅ 2025-04-20 – Attivato deploy GitHub con App + token</div>
-      <div class="log-box">✅ 2025-04-19 – Configurazione Storage + Link a Drive</div>
-    </section>
-
-    <section>
-      <h2 class="section-title">📤 Documenti & Export</h2>
-      <ul>
-        <li><a href="#">📁 Registro backup (CSV)</a></li>
-        <li><a href="#">📄 Documentazione GPT-EPM</a></li>
-        <li><a href="#">📜 Log versioni (TXT/MD)</a></li>
-        <li><a href="#">📦 Download ZIP + PDF</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2 class="section-title">🌐 Connessioni AI Esterne</h2>
-      <ul class="list-group">
-        <li class="list-group-item">🎙️ ElevenLabs: stato crediti OK (10.000)</li>
-        <li class="list-group-item">🎞️ Runway: sincronizzazione attiva</li>
-        <li class="list-group-item">🧠 API esterne: collegate</li>
-        <li class="list-group-item">🔁 Failover attivo in caso di blocchi</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2 class="section-title">🧭 Cervello Centrale – Nodo AI</h2>
-      <p>Gestione architettura multi-agente e orchestrazione GPT. Monitoraggio, autoupgrade, sincronizzazione API, storage, deploy.</p>
-      <div class="graph-placeholder text-center">[Mappa relazioni agenti – coming soon]</div>
-    </section>
-
-    <section>
-      <h2 class="section-title">🔍 Cosa manca ancora</h2>
+      <h2 class="section-title">🔍 Cosa manca ancora <span class="tooltip-icon" title="Funzionalità previste ma non ancora attivate">ℹ️</span></h2>
       <ul>
         <li>❌ Integrazione React per dashboard dinamica</li>
         <li>❌ Simulazione agenti in tempo reale</li>
         <li>❌ Gestione visuale di crediti / token</li>
         <li>❌ Download sincronizzato via API</li>
+        <li>❌ Grafico interattivo reale con dati attivi</li>
+        <li>❌ Export CSV completo con log temporali</li>
+        <li>❌ Analisi performance agenti AI</li>
+        <li>❌ Classifica progetti per avanzamento</li>
+        <li>❌ Modalità multiutente con login</li>
+        <li>❌ Notifiche push in tempo reale</li>
       </ul>
     </section>
 
-    <section>
-      <h2 class="section-title">🔗 Link Utili & Navigazione</h2>
-      <ul>
-        <li><a href="https://github.com/pomadario/superprompt-dashboard" target="_blank">GitHub Repository</a></li>
-        <li><a href="https://pomadario.github.io/superprompt-dashboard" target="_blank">🌐 Dashboard Online</a></li>
-        <li><a href="https://drive.google.com/drive/folders/1lBVKvG" target="_blank">📁 Google Drive GPT</a></li>
-      </ul>
-    </section>
-  </div>
-  <script>
-    function toggleNightMode() {
-      document.body.classList.toggle('night-mode');
-    }
-    const backupTable = document.getElementById("backup-status-table");
-    const progetti = ["SuperPrompt","Video Machine","Take Side Now","Tableware Academy","Drive GPT Sync","GPT App Builder","Memory Squad","VCV-GPT"];
-    const today = new Date().toISOString().split("T")[0];
-    backupTable.innerHTML = progetti.map(p => `<tr><td>${p}</td><td>${today}</td><td><span class='badge bg-success'>✅ Completato</span></td></tr>`).join("\n");
-  </script>
+    <script>
+      function toggleNightMode() {
+        document.body.classList.toggle('night-mode');
+      }
+      const backupTable = document.getElementById("backup-status-table");
+      const progetti = ["SuperPrompt","Video Machine","Take Side Now","Tableware Academy","Drive GPT Sync","GPT App Builder","Memory Squad","VCV-GPT"];
+      const today = new Date().toISOString().split("T")[0];
+      backupTable.innerHTML = progetti.map(p => `<tr><td>${p}</td><td>${today}</td><td><span class='badge bg-success'>✅ Completato</span></td></tr>`).join("\n");
+    </script>
 </body>
 </html>
