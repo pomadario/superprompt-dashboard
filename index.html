@@ -32,7 +32,30 @@
   // Esegui il caricamento non appena la pagina è pronta
   window.addEventListener('DOMContentLoaded', caricaModuliAttivi);
 </script>
-   
+   <script>
+  async function caricaModuliAttivi() {
+    const res = await fetch("moduli_attivi_superprompt.json");
+    const moduli = await res.json();
+    const tableBody = document.getElementById("moduli-table-body");
+    tableBody.innerHTML = "";
+
+    moduli.forEach((modulo, index) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${modulo.id}</td>
+        <td>${modulo.nome}</td>
+        <td>${modulo.categoria}</td>
+        <td>${modulo.modalita}</td>
+        <td><span class="badge ${modulo.stato.includes('🟢') ? 'bg-success' : 'bg-warning'}">${modulo.stato}</span></td>
+      `;
+      tableBody.appendChild(row);
+    });
+  }
+
+  // Esegui il caricamento non appena la pagina è pronta
+  window.addEventListener('DOMContentLoaded', caricaModuliAttivi);
+</script>
+
  body { background-color: #f8fafc; font-family: 'Segoe UI', sans-serif; transition: background 0.4s, color 0.4s; }
     .section-title { font-weight: 700; font-size: 1.5rem; margin-top: 2rem; }
     .badge-status { font-size: 0.9rem; }
