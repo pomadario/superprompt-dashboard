@@ -36,6 +36,33 @@
       </a>
     </header>
 
+    <!-- SEZIONE MODULI ATTIVI -->
+    <section>
+      <h2 class="section-title">🧩 Moduli Attivi – Sistema SuperPrompt</h2>
+      <div class="accordion" id="moduliAttiviAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="moduliHeading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#moduliCollapse" aria-expanded="false" aria-controls="moduliCollapse">
+              Visualizza elenco completo dei 84 moduli attivi
+            </button>
+          </h2>
+          <div id="moduliCollapse" class="accordion-collapse collapse" aria-labelledby="moduliHeading" data-bs-parent="#moduliAttiviAccordion">
+            <div class="accordion-body">
+              <table class="table table-striped">
+                <thead><tr><th>#</th><th>Nome Modulo</th><th>Categoria</th><th>Modalità</th><th>Stato</th></tr></thead>
+                <tbody id="moduli-table-body">
+                  <tr><td>1</td><td>FastTrackMode</td><td>Accelerazione</td><td>Auto</td><td><span class="badge bg-success">🟢 Attivo</span></td></tr>
+                  <tr><td>2</td><td>CompressedExecutor-GPT</td><td>Batch</td><td>Auto</td><td><span class="badge bg-success">🟢 Attivo</span></td></tr>
+                  <tr><td>3</td><td>FallbackGuardian-GPT</td><td>Fallback</td><td>Auto</td><td><span class="badge bg-success">🟢 Attivo</span></td></tr>
+                  <!-- ... qui vengono caricati dinamicamente gli altri 81 moduli ... -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SEZIONE PROGETTI ATTIVI -->
     <section>
       <h2 class="section-title">📁 Progetti Attivi</h2>
