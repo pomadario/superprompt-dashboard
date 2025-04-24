@@ -1,0 +1,146 @@
+[
+  {
+    "name": "GPT_01",
+    "description": "Assistente GPT numero 1",
+    "prompt": "Questo è il prompt del GPT 1",
+    "instructions": "Istruzioni operative dettagliate per il GPT 1."
+  },
+  {
+    "name": "GPT_02",
+    "description": "Assistente GPT numero 2",
+    "prompt": "Questo è il prompt del GPT 2",
+    "instructions": "Istruzioni operative dettagliate per il GPT 2."
+  },
+  {
+    "name": "GPT_03",
+    "description": "Assistente GPT numero 3",
+    "prompt": "Questo è il prompt del GPT 3",
+    "instructions": "Istruzioni operative dettagliate per il GPT 3."
+  },
+  {
+    "name": "GPT_04",
+    "description": "Assistente GPT numero 4",
+    "prompt": "Questo è il prompt del GPT 4",
+    "instructions": "Istruzioni operative dettagliate per il GPT 4."
+  },
+  {
+    "name": "GPT_05",
+    "description": "Assistente GPT numero 5",
+    "prompt": "Questo è il prompt del GPT 5",
+    "instructions": "Istruzioni operative dettagliate per il GPT 5."
+  },
+  {
+    "name": "GPT_06",
+    "description": "Assistente GPT numero 6",
+    "prompt": "Questo è il prompt del GPT 6",
+    "instructions": "Istruzioni operative dettagliate per il GPT 6."
+  },
+  {
+    "name": "GPT_07",
+    "description": "Assistente GPT numero 7",
+    "prompt": "Questo è il prompt del GPT 7",
+    "instructions": "Istruzioni operative dettagliate per il GPT 7."
+  },
+  {
+    "name": "GPT_08",
+    "description": "Assistente GPT numero 8",
+    "prompt": "Questo è il prompt del GPT 8",
+    "instructions": "Istruzioni operative dettagliate per il GPT 8."
+  },
+  {
+    "name": "GPT_09",
+    "description": "Assistente GPT numero 9",
+    "prompt": "Questo è il prompt del GPT 9",
+    "instructions": "Istruzioni operative dettagliate per il GPT 9."
+  },
+  {
+    "name": "GPT_10",
+    "description": "Assistente GPT numero 10",
+    "prompt": "Questo è il prompt del GPT 10",
+    "instructions": "Istruzioni operative dettagliate per il GPT 10."
+  },
+  {
+    "name": "GPT_11",
+    "description": "Assistente GPT numero 11",
+    "prompt": "Questo è il prompt del GPT 11",
+    "instructions": "Istruzioni operative dettagliate per il GPT 11."
+  },
+  {
+    "name": "GPT_12",
+    "description": "Assistente GPT numero 12",
+    "prompt": "Questo è il prompt del GPT 12",
+    "instructions": "Istruzioni operative dettagliate per il GPT 12."
+  },
+  {
+    "name": "GPT_13",
+    "description": "Assistente GPT numero 13",
+    "prompt": "Questo è il prompt del GPT 13",
+    "instructions": "Istruzioni operative dettagliate per il GPT 13."
+  },
+  {
+    "name": "GPT_14",
+    "description": "Assistente GPT numero 14",
+    "prompt": "Questo è il prompt del GPT 14",
+    "instructions": "Istruzioni operative dettagliate per il GPT 14."
+  },
+  {
+    "name": "GPT_15",
+    "description": "Assistente GPT numero 15",
+    "prompt": "Questo è il prompt del GPT 15",
+    "instructions": "Istruzioni operative dettagliate per il GPT 15."
+  },
+  {
+    "name": "GPT_16",
+    "description": "Assistente GPT numero 16",
+    "prompt": "Questo è il prompt del GPT 16",
+    "instructions": "Istruzioni operative dettagliate per il GPT 16."
+  },
+  {
+    "name": "GPT_17",
+    "description": "Assistente GPT numero 17",
+    "prompt": "Questo è il prompt del GPT 17",
+    "instructions": "Istruzioni operative dettagliate per il GPT 17."
+  },
+  {
+    "name": "GPT_18",
+    "description": "Assistente GPT numero 18",
+    "prompt": "Questo è il prompt del GPT 18",
+    "instructions": "Istruzioni operative dettagliate per il GPT 18."
+  },
+  {
+    "name": "GPT_19",
+    "description": "Assistente GPT numero 19",
+    "prompt": "Questo è il prompt del GPT 19",
+    "instructions": "Istruzioni operative dettagliate per il GPT 19."
+  },
+  {
+    "name": "GPT_20",
+    "description": "Assistente GPT numero 20",
+    "prompt": "Questo è il prompt del GPT 20",
+    "instructions": "Istruzioni operative dettagliate per il GPT 20."
+  },
+  {
+    "name": "GPT_21",
+    "description": "Assistente GPT numero 21",
+    "prompt": "Questo è il prompt del GPT 21",
+    "instructions": "Istruzioni operative dettagliate per il GPT 21."
+  },
+  {
+    "name": "GPT_22",
+    "description": "Assistente GPT numero 22",
+    "prompt": "Questo è il prompt del GPT 22",
+    "instructions": "Istruzioni operative dettagliate per il GPT 22."
+  },
+  {
+    "name": "GPT_23",
+    "description": "Assistente GPT numero 23",
+    "prompt": "Questo è il prompt del GPT 23",
+    "instructions": "Istruzioni operative dettagliate per il GPT 23."
+  },
+  {
+    "name": "GPT_24",
+    "description": "Assistente GPT numero 24",
+    "prompt": "Questo è il prompt del GPT 24",
+    "instructions": "Istruzioni operative dettagliate per il GPT 24."
+  }
+]

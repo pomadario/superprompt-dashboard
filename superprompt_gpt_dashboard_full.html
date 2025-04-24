@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>GPT Generati – SuperPrompt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: sans-serif; padding: 2rem; background: #f9f9f9; }
+    h1 { font-size: 1.8rem; }
+    .gpt-box { background: white; padding: 1rem; margin-bottom: 1rem; border-radius: 10px; box-shadow: 0 2px 4px #ddd; }
+    .gpt-title { font-size: 1.4rem; font-weight: bold; margin-bottom: 0.3rem; }
+    .gpt-description { color: #666; margin-bottom: 0.5rem; }
+    .gpt-section { margin: 1rem 0; }
+    .code { background: #f1f1f1; padding: 0.8rem; border-radius: 6px; white-space: pre-wrap; font-family: monospace; }
+    .copy-btn { float: right; cursor: pointer; background: #444; color: white; padding: 0.2rem 0.6rem; font-size: 0.8rem; border: none; border-radius: 5px; }
+    .copy-btn:hover { background: #000; }
+    .graph { margin-top: 2rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>🧠 GPT Personalizzati – SuperPrompt</h1>
+  <div id="gpt-container">Caricamento GPT in corso...</div>
+
+  <div class="graph">
+    <h2>📊 Effetto Accelerazione – Sistema SuperPrompt</h2>
+    <img src="accelerazione_superprompt.png" alt="Grafico Accelerazione" width="600">
+  </div>
+
+  <script>
+    async function loadGPT() {
+      const res = await fetch("gpt_export.json");
+      const data = await res.json();
+      const container = document.getElementById("gpt-container");
+      container.innerHTML = "";
+
+      data.forEach((gpt, index) => {
+        const box = document.createElement("div");
+        box.className = "gpt-box";
+
+        box.innerHTML = `
+          <div class="gpt-title">${gpt.name}</div>
+          <div class="gpt-description">${gpt.description}</div>
+
+          <div class="gpt-section"><strong>🎯 Prompt</strong> <button class="copy-btn" onclick="copyText('prompt-${index}')">Copia</button></div>
+          <div id="prompt-${index}" class="code">${gpt.prompt}</div>
+
+          <div class="gpt-section"><strong>📋 Istruzioni</strong> <button class="copy-btn" onclick="copyText('instructions-${index}')">Copia</button></div>
+          <div id="instructions-${index}" class="code">${gpt.instructions}</div>
+        `;
+        container.appendChild(box);
+      });
+    }
+
+    function copyText(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => alert("Testo copiato!"));
+    }
+
+    loadGPT();
+  </script>
+</body>
+</html>
