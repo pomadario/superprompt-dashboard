@@ -1,0 +1,590 @@
+[
+  {
+    "id": 1,
+    "nome": "Modulo 1",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 2,
+    "nome": "Modulo 2",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 3,
+    "nome": "Modulo 3",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 4,
+    "nome": "Modulo 4",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 5,
+    "nome": "Modulo 5",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 6,
+    "nome": "Modulo 6",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 7,
+    "nome": "Modulo 7",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 8,
+    "nome": "Modulo 8",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 9,
+    "nome": "Modulo 9",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 10,
+    "nome": "Modulo 10",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 11,
+    "nome": "Modulo 11",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 12,
+    "nome": "Modulo 12",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 13,
+    "nome": "Modulo 13",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 14,
+    "nome": "Modulo 14",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 15,
+    "nome": "Modulo 15",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 16,
+    "nome": "Modulo 16",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 17,
+    "nome": "Modulo 17",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 18,
+    "nome": "Modulo 18",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 19,
+    "nome": "Modulo 19",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 20,
+    "nome": "Modulo 20",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 21,
+    "nome": "Modulo 21",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 22,
+    "nome": "Modulo 22",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 23,
+    "nome": "Modulo 23",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 24,
+    "nome": "Modulo 24",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 25,
+    "nome": "Modulo 25",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 26,
+    "nome": "Modulo 26",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 27,
+    "nome": "Modulo 27",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 28,
+    "nome": "Modulo 28",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 29,
+    "nome": "Modulo 29",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 30,
+    "nome": "Modulo 30",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 31,
+    "nome": "Modulo 31",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 32,
+    "nome": "Modulo 32",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 33,
+    "nome": "Modulo 33",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 34,
+    "nome": "Modulo 34",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 35,
+    "nome": "Modulo 35",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 36,
+    "nome": "Modulo 36",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 37,
+    "nome": "Modulo 37",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 38,
+    "nome": "Modulo 38",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 39,
+    "nome": "Modulo 39",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 40,
+    "nome": "Modulo 40",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 41,
+    "nome": "Modulo 41",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 42,
+    "nome": "Modulo 42",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 43,
+    "nome": "Modulo 43",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 44,
+    "nome": "Modulo 44",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 45,
+    "nome": "Modulo 45",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 46,
+    "nome": "Modulo 46",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 47,
+    "nome": "Modulo 47",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 48,
+    "nome": "Modulo 48",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 49,
+    "nome": "Modulo 49",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 50,
+    "nome": "Modulo 50",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 51,
+    "nome": "Modulo 51",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 52,
+    "nome": "Modulo 52",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 53,
+    "nome": "Modulo 53",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 54,
+    "nome": "Modulo 54",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 55,
+    "nome": "Modulo 55",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 56,
+    "nome": "Modulo 56",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 57,
+    "nome": "Modulo 57",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 58,
+    "nome": "Modulo 58",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 59,
+    "nome": "Modulo 59",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 60,
+    "nome": "Modulo 60",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 61,
+    "nome": "Modulo 61",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 62,
+    "nome": "Modulo 62",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 63,
+    "nome": "Modulo 63",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 64,
+    "nome": "Modulo 64",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 65,
+    "nome": "Modulo 65",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 66,
+    "nome": "Modulo 66",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 67,
+    "nome": "Modulo 67",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 68,
+    "nome": "Modulo 68",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 69,
+    "nome": "Modulo 69",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 70,
+    "nome": "Modulo 70",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 71,
+    "nome": "Modulo 71",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 72,
+    "nome": "Modulo 72",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 73,
+    "nome": "Modulo 73",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 74,
+    "nome": "Modulo 74",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 75,
+    "nome": "Modulo 75",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 76,
+    "nome": "Modulo 76",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 77,
+    "nome": "Modulo 77",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 78,
+    "nome": "Modulo 78",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 79,
+    "nome": "Modulo 79",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 80,
+    "nome": "Modulo 80",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 81,
+    "nome": "Modulo 81",
+    "categoria": "Accelerazione",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 82,
+    "nome": "Modulo 82",
+    "categoria": "Verifica",
+    "modalita": "Manuale",
+    "stato": "🔄 Fallback"
+  },
+  {
+    "id": 83,
+    "nome": "Modulo 83",
+    "categoria": "Batch",
+    "modalita": "Auto",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 84,
+    "nome": "Modulo 84",
+    "categoria": "Fallback",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  }
+]
