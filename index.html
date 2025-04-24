@@ -213,6 +213,48 @@
         </div>
       </div>
     </section>
+   
+<!-- 📦 Backup Automatico Memorie GPT -->
+<section>
+  <h2 class="section-title">📂 Storico Memorie GPT (Backup + Download)</h2>
+  <div class="card mb-4">
+    <div class="card-body">
+      <button class="btn btn-outline-success mb-3" onclick="salvaBackupGPT()">💾 Salva Backup Memoria GPT</button>
+      <ul id="logBackupGPT" class="list-group small">
+        <li class="list-group-item">Nessun backup ancora effettuato.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script>
+  function salvaBackupGPT() {
+    const contenuto = document.getElementById('fileContent').value;
+    if (!contenuto.trim()) {
+      alert("⚠️ Nessun contenuto da salvare!");
+      return;
+    }
+    const now = new Date();
+    const timestamp = now.toISOString().replace(/[:.]/g, "-");
+    const filename = `memoriaGPT_${timestamp}.txt`;
+    const blob = new Blob([contenuto], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    link.textContent = `📥 ${filename}`;
+    link.className = "list-group-item list-group-item-action";
+    link.onclick = () => setTimeout(() => URL.revokeObjectURL(url), 1000);
+
+    const list = document.getElementById("logBackupGPT");
+    if (list.children[0].textContent.includes("Nessun backup")) {
+      list.innerHTML = "";
+    }
+    list.prepend(link);
+  }
+</script>
+
   </div>
   <script>
     function toggleNightMode() {
