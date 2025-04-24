@@ -9,29 +9,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-<script>
-  async function caricaModuliAttivi() {
-    const res = await fetch("moduli_attivi_superprompt.json");
-    const moduli = await res.json();
-    const tableBody = document.getElementById("moduli-table-body");
-    tableBody.innerHTML = "";
-
-    moduli.forEach((modulo, index) => {
-      const row = document.createElement("tr");
-      row.innerHTML = `
-        <td>${modulo.id}</td>
-        <td>${modulo.nome}</td>
-        <td>${modulo.categoria}</td>
-        <td>${modulo.modalita}</td>
-        <td><span class="badge ${modulo.stato.includes('🟢') ? 'bg-success' : 'bg-warning'}">${modulo.stato}</span></td>
-      `;
-      tableBody.appendChild(row);
-    });
-  }
-
-  // Esegui il caricamento non appena la pagina è pronta
-  window.addEventListener('DOMContentLoaded', caricaModuliAttivi);
-</script>
    <script>
   async function caricaModuliAttivi() {
     const res = await fetch("moduli_attivi_superprompt.json");
