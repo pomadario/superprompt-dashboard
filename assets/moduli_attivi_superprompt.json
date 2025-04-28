@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nome": "MemorySync-GPT",
+    "categoria": "Backup",
+    "modalita": "Automatica",
+    "stato": "🟢 Attivo"
+  },
+  {
+    "id": 2,
+    "nome": "Director-GPT",
+    "categoria": "Controllo",
+    "modalita": "Manuale",
+    "stato": "🟢 Attivo"
+  }
+]
