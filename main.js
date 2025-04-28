@@ -16,3 +16,30 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 function toggleNightMode() { document.body.classList.toggle('night-mode'); }
+// Funzione per caricare moduli GPT attivi
+async function caricaModuliAttivi() {
+    try {
+        const response = await fetch('assets/moduli_attivi_superprompt.json');
+        const moduli = await response.json();
+        const tableBody = document.getElementById("moduli-table-body");
+        tableBody.innerHTML = "";
+        moduli.forEach((modulo) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+              <td>${modulo.id}</td>
+              <td>${modulo.nome}</td>
+              <td>${modulo.categoria}</td>
+              <td>${modulo.modalita}</td>
+              <td><span>${modulo.stato}</span></td>
+            `;
+            tableBody.appendChild(row);
+        });
+    } catch (error) {
+        console.error('Errore nel caricamento dei moduli:', error);
+    }
+}
+
+// Richiama subito la funzione al caricamento pagina
+document.addEventListener('DOMContentLoaded', () => {
+    caricaModuliAttivi();
+});
